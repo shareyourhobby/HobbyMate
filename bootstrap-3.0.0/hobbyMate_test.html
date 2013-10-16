@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+
+    <title>Learn Share & Teach Hobbies</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="examples\jumbotron\jumbotron.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="jqwidgets-ver3.0.3/jqwidgets/styles/jqx.base.css" type="text/css" />
+        <!--script type="text/javascript" src="jqwidgets-ver3.0.3/scripts/jquery-1.10.2.min.js"></script-->
+    <script src="assets/js/jquery.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="jqwidgets-ver3.0.3/jqwidgets/jqxcore.js"></script>
+        <script type="text/javascript" src="jqwidgets-ver3.0.3/jqwidgets/jqxdata.js"></script>
+        <script type="text/javascript" src="jqwidgets-ver3.0.3/jqwidgets/jqxbuttons.js"></script>
+        <script type="text/javascript" src="jqwidgets-ver3.0.3/jqwidgets/jqxscrollbar.js"></script>
+        <script type="text/javascript" src="jqwidgets-ver3.0.3/jqwidgets/jqxmenu.js"></script>
+        <script type="text/javascript" src="jqwidgets-ver3.0.3/jqwidgets/jqxcheckbox.js"></script>
+        <script type="text/javascript" src="jqwidgets-ver3.0.3/jqwidgets/jqxlistbox.js"></script>
+        <script type="text/javascript" src="jqwidgets-ver3.0.3/jqwidgets/jqxdropdownlist.js"></script>
+        <script type="text/javascript" src="jqwidgets-ver3.0.3/jqwidgets/jqxgrid.js"></script>
+        <script type="text/javascript" src="jqwidgets-ver3.0.3/jqwidgets/jqxgrid.pager.js"></script>
+        <script type="text/javascript" src="jqwidgets-ver3.0.3/jqwidgets/jqxgrid.selection.js"></script>
+        <script type="text/javascript" src="jqwidgets-ver3.0.3/jqwidgets/jqxdropdownbutton.js"></script>
+      
+      <script src="js/utilities.js"></script>
+      <script src="js/addelements.js"></script>
+
+        <script type="text/javascript" src="jqwidgets-ver3.0.3/scripts/gettheme.js"></script>      
+       <script type="text/javascript">
+        $(document).ready(function () {
+            var theme = getDemoTheme();
+            var url = "jqwidgets-ver3.0.3/demos/sampledata/beverages.txt";
+
+            // prepare the data
+            var data = {};
+            var firstNames =
+            [
+                "Andrew", "Nancy", "Shelley", "Regina", "Yoshi", "Antoni", "Mayumi", "Ian", "Peter", "Lars", "Petra", "Martin", "Sven", "Elio", "Beate", "Cheryl", "Michael", "Guylene"
+            ];
+            var lastNames =
+            [
+                "Fuller", "Davolio", "Burke", "Murphy", "Nagase", "Saavedra", "Ohno", "Devling", "Wilson", "Peterson", "Winkler", "Bein", "Petersen", "Rossi", "Vileid", "Saylor", "Bjorn", "Nodier"
+            ];
+            var productNames =
+            [
+                "Black Tea", "Green Tea", "Caffe Espresso", "Doubleshot Espresso", "Caffe Latte", "White Chocolate Mocha", "Cramel Latte", "Caffe Americano", "Cappuccino", "Espresso Truffle", "Espresso con Panna", "Peppermint Mocha Twist"
+            ];
+            var priceValues =
+            [
+                "2.25", "1.5", "3.0", "3.3", "4.5", "3.6", "3.8", "2.5", "5.0", "1.75", "3.25", "4.0"
+            ];
+            
+            
+            var generaterow = function (i) {
+                var row = {};
+                var productindex = Math.floor(Math.random() * productNames.length);
+                var price = parseFloat(priceValues[productindex]);
+                var quantity = 1 + Math.round(Math.random() * 10);
+                row["firstname"] = lastNames[Math.floor(Math.random() * lastNames.length)];
+                row["lastname"] = lastNames[Math.floor(Math.random() * lastNames.length)];
+                row["productname"] = productNames[productindex];
+                row["price"] = price;
+                row["quantity"] = quantity;
+                row["total"] = price * quantity;
+                
+                return row;
+            }
+//            for (var i = 0; i < 2; i++) {
+//                var row = generaterow(i);
+//                data[i] = row;
+//            }
+            var source1 =
+            {
+                dataType: "json",
+                datafields:
+                [
+                    { name: 'GroupCompanyId' },
+                    { name: 'GroupName' },
+                ],
+                id: 'id',
+                url: url
+
+            }
+            var dataAdapter1 = new $.jqx.dataAdapter(source1, {
+                beforeLoadComplete: function (records) {
+                    // get data records.dataAdapater1
+                    var records = dataAdapter1.records;
+                    // get the length of the records array.
+                    var length = records.length;
+                    // loop through the records and display them in a table.
+                    var html = "<table border='1'><tr><th align='left'>Name</th><th align='left'>Type</th></tr>";
+                    for (var i = 0; i < 20; i++) {
+                        var record = records[i];
+                        html += "<tr>";
+                        html += "<td>" + record.GroupCompanyId + "</td>";
+                        html += "<td>" + record.GroupName + "</td>";
+                        html += "</tr>";
+                    }
+                    html += "</table>";
+                    $("#table").html(html);
+            
+                },
+                loadError: function (jqXHR, status, error) {
+                },
+                beforeLoadComplete: function (records) {
+                }
+            });
+            dataAdapter1.dataBind();
+            var source =
+            {
+                localdata: data,
+                datatype: "local",
+                datafields:
+                [
+                    { name: 'firstname', type: 'string'},
+                    { name: 'lastname', type: 'string' },
+                    { name: 'productname', type: 'string' },
+                    { name: 'quantity', type: 'number' },
+                    { name: 'price', type: 'number' },
+                    { name: 'total', type: 'number' }
+                ],
+                addrow: function (rowid, rowdata, position, commit) {
+                    // synchronize with the server - send insert command
+                    // call commit with parameter true if the synchronization with the server is successful 
+                    //and with parameter false if the synchronization failed.
+                    // you can pass additional argument to the commit callback which represents the new ID if it is generated from a DB.
+                    commit(true);
+                },
+                deleterow: function (rowid, commit) {
+                    // synchronize with the server - send delete command
+                    // call commit with parameter true if the synchronization with the server is successful 
+                    //and with parameter false if the synchronization failed.
+                    commit(true);
+                },
+                updaterow: function (rowid, newdata, commit) {
+                    // synchronize with the server - send update command
+                    // call commit with parameter true if the synchronization with the server is successful 
+                    // and with parameter false if the synchronization failed.
+                    commit(true);
+                }
+            };
+            var dataAdapter = new $.jqx.dataAdapter(source);
+            // initialize jqxGrid
+            $("#jqxgrid").jqxGrid(
+            {
+                width: 500,
+                height: 350,
+                pageable: true,
+                source: dataAdapter,
+                autoheight: true,
+                theme: theme,
+                columns: [
+                  { text: 'First Name', datafield: 'firstname', columntype: 'dropdownlist', displayfield:
+                    'GroupName', datafield: 'GroupCompanyId', width: 200,
+                    createeditor: function (row, cellvalue, editor)
+                    {
+                        editor.jqxDropDownList
+                        ({ source: dataAdapater1, displayMember: 'GroupName',
+                            valueMember: 'GroupCompanyId'
+                        });
+
+                    } 
+                  },
+                  { text: 'Last Name', datafield: 'lastname', width: 100 },
+                  { text: 'Product', datafield: 'productname', width: 180 },
+                  { text: 'Quantity', datafield: 'quantity', width: 80, cellsalign: 'right' },
+                  { text: 'Unit Price', datafield: 'price', width: 90, cellsalign: 'right', cellsformat: 'c2' },
+                  { text: 'Total', datafield: 'total', width: 100, cellsalign: 'right', cellsformat: 'c2' }
+                ]
+            });
+            $("#addrowbutton").jqxButton({ theme: theme });
+            $("#addmultiplerowsbutton").jqxButton({ theme: theme });
+            $("#deleterowbutton").jqxButton({ theme: theme });
+            $("#updaterowbutton").jqxButton({ theme: theme });
+            // update row.
+            $("#updaterowbutton").on('click', function () {
+                var datarow = generaterow();
+                var selectedrowindex = $("#jqxgrid").jqxGrid('getselectedrowindex');
+                var rowscount = $("#jqxgrid").jqxGrid('getdatainformation').rowscount;
+                if (selectedrowindex >= 0 && selectedrowindex < rowscount) {
+                    var id = $("#jqxgrid").jqxGrid('getrowid', selectedrowindex);
+                    var commit = $("#jqxgrid").jqxGrid('updaterow', id, datarow);
+                    $("#jqxgrid").jqxGrid('ensurerowvisible', selectedrowindex);
+                }
+            });
+            // create new row.
+            $("#addrowbutton").on('click', function () {
+                var datarow = generaterow();
+                var commit = $("#jqxgrid").jqxGrid('addrow', null, datarow, 'top');
+            });
+            // create new rows.
+            $("#addmultiplerowsbutton").on('click', function () {
+                $("#jqxgrid").jqxGrid('beginupdate');
+                for (var i = 0; i < 10; i++) {
+                    var datarow = generaterow();
+                    var commit = $("#jqxgrid").jqxGrid('addrow', null, datarow);
+                }
+                $("#jqxgrid").jqxGrid('endupdate');
+            });
+            // delete row.
+            $("#deleterowbutton").on('click', function () {
+                var selectedrowindex = $("#jqxgrid").jqxGrid('getselectedrowindex');
+                var rowscount = $("#jqxgrid").jqxGrid('getdatainformation').rowscount;
+                if (selectedrowindex >= 0 && selectedrowindex < rowscount) {
+                    var id = $("#jqxgrid").jqxGrid('getrowid', selectedrowindex);
+                    var commit = $("#jqxgrid").jqxGrid('deleterow', id);
+                }
+            });
+        });
+    </script>
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">HobbyMate</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#howItWorks">How It Works?</a></li>
+            <li><a href="#faq">FAQ's</a></li>
+            <li><a href="#cmgsun">Coming Soon</a></li>
+          </ul>
+          <form class="navbar-form navbar-right">
+            <div class="form-group">
+              <input type="text" placeholder="Email" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Password" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-success">Sign in</button>
+          </form>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+            <div id="table">
+
+    </div>
+
+      <div class="container">
+        <h1>Welcome</h1>
+        <p>We at HobbyMate aim to connect people of similar skills & provide a platform to people who would like to explore their hidden talents.</p>
+        <p><a class="btn btn-primary btn-lg" href="http://www.google.com">Learn more &raquo;</a></p>
+      <div id='jqxWidget' style="font-size: 13px; font-family: Verdana; float: left;">
+          <div style="float: left;" id="jqxgrid">
+<!--
+              <div id="jqxdropdownbutton">
+                        <div id='jqxDropDownList'>
+                        </div>
+                  </div>
+-->
+            <div style='float: left;'>
+            </div>
+          </div>
+                  <div style="margin-left: 10px; float: left;">
+            <div>
+                <input id="addrowbutton" type="button" value="Add New Row" />
+            </div>
+            <div style="margin-top: 10px;">
+                <input id="addmultiplerowsbutton" type="button" value="Add Multiple New Rows" />
+            </div>
+            <div style="margin-top: 10px;">
+                <input id="deleterowbutton" type="button" value="Delete Selected Row" />
+            </div>
+            <div style="margin-top: 10px;">
+                <input id="updaterowbutton" type="button" value="Update Selected Row" />
+            </div>
+        </div>
+
+                <div id="addrow">
+	<label for="addnum">Add Rows:
+	<input type="text" name="addnum" id="addnum" value="" size="2">
+	</label>
+	<input type="button" name="addbtn" id="addbtn" value="Go!">
+          </div>
+          <br>
+<fieldset id="lunches"> 
+	<legend>Let's do Lunch</legend>
+	<div class="formrow">
+		<span>My </span>
+		<select name="lunch[]" class="dropdown">
+			<option value="">Select a lunch item</option>
+			<option value="baloney">Baloney</option>
+			<option value="yogurt">Yogurt</option>
+			<option value="apple">Apple</option>
+			<option value="cheese">Government Cheese</option>
+		</select>
+		<span> has a </span>
+		<select name="firstorlast[]" class="dropdown">
+			<option value="first">First</option>
+			<option value="second">Second</option>
+		</select>
+		<span> name. It's</span>
+		<input type="text" name="name[]" value="Specify a Name" size="20">
+	</div>
+</fieldset>
+
+
+      </div>
+          
+      </div>
+    </div>
+
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-lg-4">
+          <h2>Heading</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
+        </div>
+        <div class="col-lg-4">
+          <h2>Heading</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
+       </div>
+        <div class="col-lg-4">
+          <h2>Heading</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
+        </div>
+      </div>
+      <footer>
+        <p>&copy; Company 2013</p>
+      </footer>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  </body>
+</html>
