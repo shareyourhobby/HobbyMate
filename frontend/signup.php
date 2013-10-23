@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="HobbyMate | One stop shop for your Hobby needs">
     <meta name="author" content="Vishal Arhatia">
-    <title>HobbyMate!!! | Learn, Share & Teach Hobbies!!!</title>
+    <title>HobbyMate!!! | Learn, SHare & Teach Hobbies!!!</title>
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap responsive -->
@@ -73,7 +73,7 @@
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">About<b class="caret"></b></a>
                   <ul class="dropdown-menu">
                     <li><a href="our_works.html">Our works</a></li>
-                    <li><a href="patnerships.html">Partners</a></li>
+                    <li><a href="patnerships.html">Parnerships</a></li>
                     <li><a href="leadership.html">Leadership</a></li>
                     <li><a href="news.html">News</a></li>
                     <li><a href="events.html">Events</a></li>
@@ -82,7 +82,7 @@
                 </li>
                 <li><a href="faq.html">FAQ</a></li>
                 <li><a href="contact_us.html">Contact us</a></li>
-                <li><a href="signup.html">Sign up</a></li>
+                <li><a href="signup.html" class="active-link">Sign up</a></li>
                 <li><a href="signin.html">Sign in</a></li>
               </ul>
             </div>
@@ -94,132 +94,58 @@
     <!-- End: HEADER -->
     <!-- Start: MAIN CONTENT -->
     <div class="content">
-      <!-- Start: slider -->
-						<!--div class="row-fluid">
-							<div class="span6 marketting-info">
-								<h3>We at HobbyMate aim to connect people of similar skills & provide a platform to
-								people who would like to explore their hidden talents.</h3>
-								<h3>
-								<a href="product.html" class="btn">Learn more</a>
-								</h3>                      
-							</div>
-							<div class="span6">
-								<img src="img/placeholder.jpg" class="thumbnail">
-							</div>
-						</div-->                  
-				<div class="item">
-					<div class="hero-unit">
-						<div class="row-fluid">
-							<div class="span6 marketting-info">
-								<h1>Welcome</h1>
-								<h3>We at HobbyMate aim to connect people of similar skills & provide a platform to
-								people who would like to explore their hidden talents.</h3>
-								<h3>
-								<h4>
-									<a href="learnMore.html" class="btn btn-primary">Learn more</a>
-									<!--a href="product.html" class="btn">Learn more</a-->
-								</h4>                      
-							</div>
-							<div class="span6">
-							    <div class="slider">
-									<div class="container-fluid">
-										<div id="heroSlider1" class="carousel slide">
-											<div class="carousel-inner">
-												<div class="active item">
-													<div class="hero-unit">
-														<div class="row-fluid">
-															<div class="span12">
-																<img src="img/placeholder.jpg" class="thumbnail">
-															</div>
-														</div>
-													</div>	
-												</div>
-												<div class="item">
-													<div class="hero-unit">
-														<div class="row-fluid">
-															<div class="span12">
-																<img src="img/placeholder.jpg" class="thumbnail">
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-								            <a class="left carousel-control" href="#heroSlider1" data-slide="prev">‹</a>
-											<a class="right carousel-control" href="#heroSlider1" data-slide="next">›</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-      <!-- Start: Our Solutions -->
       <div class="container">
-          <div class="page-header">
-            <h2>Explore Now</h2>
-          </div>
-          <div class="row-fluid">
-            <ul class="thumbnails">
-              <li class="span4">
-                <div class="thumbnail">
-                  <img src="img/placeholder-360x200.jpg" alt="product name">
-                  <div class="caption">
-                    <h3>For Learners & Teachers</h3>
-                    <p>
-                      Whether you want to learn, share or teach we have solution for you.
-					  Come join the India's biggest network of multi-skill people!!!
-					  <br/><br/>
-                    </p>
+        <div class="page-header">
+          <h1>Signup to HobbyMate</h1>
+        </div>
+        <div class="row">
+          <div class="span6 offset3">
+            <h4 class="widget-header"><i class="icon-gift"></i> Be a part of HobbyMate</h4>
+            <div class="widget-body">
+              <div class="center-align">
+                <form class="form-horizontal form-signin-signup" action="/hbbymt/backend/login.php" method="post">
+                  <input type="hidden" name="action" value="create">
+                  <input type="text" name="username" placeholder="Email">
+                  <input type="password" name="password" placeholder="Password">
+                  <input type="password" name="password_confirmation" placeholder="Password Confirmation">
+                  <div>
+                    <input type="submit" value="Signup" class="btn btn-primary btn-large">
                   </div>
-                  <div class="widget-footer">
-                    <p>
-                      <a href="JoinNow.html" class="btn btn-primary">JOIN NOW</a>&nbsp;
-                    </p>
-                  </div>
-                </div>
-              </li>
-              <li class="span4">
-                <div class="thumbnail">
-                  <img src="img/placeholder-360x200.jpg" alt="product name">
-                  <div class="caption">
-                    <h3>For Institutes</h3>
-                    <p>
-						If you are a institute specialized in teaching of any kind of skill,
-						then you are at the right place. Partner us & get the best students.
-						
-						What more! We offer range of services. Get in touch now!!!
-					</p>
-                  </div>
-                  <div class="widget-footer">
-                    <p>
-                      <a href="#" class="btn btn-primary">PARTNER US</a>&nbsp;
-                    </p>
-                  </div>
-                </div>
-              </li>
-              <li class="span4">
-                <div class="thumbnail">
-                  <img src="img/placeholder-360x200.jpg" alt="product name">
-                  <div class="caption">
-                    <h3>Marketplace</h3>
-                    <p>
-                      Looking for your next Guitar, Cycle but worried of initial expense?
-					  Hover to the Marketplace & rent your stuff. Quality Assured!!! 
-					  
-					  You can also place your existing stuff on rent!!!
-                    </p>
-                  </div>
-                  <div class="widget-footer">
-                    <p>
-                      <a href="#" class="btn btn-primary">GO TO MARKETPLACE</a>&nbsp;
-                    </p>
-                  </div>
-                </div>
-              </li>
-            </ul>
+                </form>
+                <h4><i class="icon-question-sign"></i> Already have an account?</h4>
+                <a href="signin.html" class="btn btn-large bottom-space">Signin</a>
+                <h4><i class="icon-thumbs-up"></i> Sign in with third party account</h4>
+                <ul class="signin-with-list">
+                  <li>
+                    <a class="btn-twitter">
+                      <i class="icon-twitter icon-large"></i>
+                      Signin with Twitter
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn-facebook">
+                      <i class="icon-facebook icon-large"></i>
+                      Signin with Facebook
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn-google">
+                      <i class="icon-google-plus icon-large"></i>
+                      Signin with Google
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn-github">
+                      <i class="icon-github icon-large"></i>
+                      Signin with Github
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
-      <!-- End: PRODUCT LIST -->
+      </div>
     </div>
     <!-- End: MAIN CONTENT -->
     <!-- Start: FOOTER -->
@@ -242,7 +168,7 @@
             <nav>
               <ul class="quick-links">
                 <li><a href="our_works.html">Our works</a></li>
-                <li><a href="patnerships.html">Partners</a></li>
+                <li><a href="patnerships.html">Patnerships</a></li>
                 <li><a href="leadership.html">Leadership</a></li>
                 <li><a href="news.html">News</a></li>
                 <li><a href="events.html">Events</a></li>
@@ -258,6 +184,15 @@
                 <li><a href="contact_us.html">Contact us</a></li>            
               </ul>
             </nav>
+            <h4><i class="icon-legal icon-white"></i> Legal</h4>
+            <nav>
+              <ul class="quick-links">
+                <li><a href="#">License</a></li>
+                <li><a href="#">Terms of Use</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Security</a></li>      
+              </ul>
+            </nav>            
           </div>
           <div class="span3">
             <h4>Get in touch</h4>
