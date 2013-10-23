@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HobbyMate | One stop shop for your Hobby needs">
+    <meta name="author" content="Vishal Arhatia">
+    <title>HobbyMate!!! | Learn, SHare & Teach Hobbies!!!</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap responsive -->
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+    <!-- Font awesome - iconic font with IE7 support --> 
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/font-awesome-ie7.css" rel="stylesheet">
+    <!-- Bootbusiness theme -->
+    <link href="css/boot-business.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Start: HEADER -->
+    <header>
+      <!-- Start: Navigation wrapper -->
+      <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+          <div class="container">
+            <a href="hobbyMate.html" class="brand brand-bootbus">HobbyMate</a>
+            <!-- Below button used for responsive navigation -->
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <!-- Start: Primary navigation -->
+            <div class="nav-collapse collapse">        
+              <ul class="nav pull-right">
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Knowledge Zone<b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li class="nav-header">Fitness</li>
+                    <li><a href="product.html">Yoga</a></li>
+                    <li><a href="product.html">Aerobics</a></li>
+					<li><a href="product.html">Body Building</a></li>
+					<li><a href="all_services.html">More Fitness Activities</a></li>
+                    <li class="divider"></li>
+                    <li class="nav-header">Outdoor</li>
+                    <li><a href="product.html">Cycling</a></li>
+                    <li><a href="product.html">Running</a></li>
+					<li><a href="product.html">Trekking</a></li>
+					<li><a href="all_services.html">More Outdoor Activities</a></li>
+                    <li class="divider"></li>
+                    <li class="nav-header">Music & Dance</li>
+                    <li><a href="product.html">Guitar</a></li>
+                    <li><a href="product.html">Flute</a></li>
+					<li><a href="product.html">Keyboard</a></li>
+					<li><a href="product.html">Salsa</a></li>
+					<li><a href="all_services.html">More Music & Dance</a></li>
+                    <li class="divider"></li>
+                    <li class="nav-header">Creative</li>
+					<li><a href="product.html">Painting</a></li>
+                    <li><a href="product.html">Cooking</a></li>
+					<li><a href="product.html">Cartooning</a></li>
+					<li><a href="product.html">Mehandi</a></li>
+					<li><a href="all_services.html">More Creative Arts</a></li>
+					<li class="divider"></li>
+                    <li class="nav-header">Sports</li>
+                    <li><a href="service.html">Cricket</a></li>
+                    <li><a href="service.html">Football</a></li>
+                    <li><a href="service.html">Basketball</a></li>
+                    <li><a href="all_services.html">More Sports</a></li>
+                  </ul>                  
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">About<b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="our_works.html">Our works</a></li>
+                    <li><a href="patnerships.html">Partners</a></li>
+                    <li><a href="leadership.html">Leadership</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                  </ul>
+                </li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact_us.html">Contact us</a></li>
+                <li><a href="signup.html">Sign up</a></li>
+                <li><a href="signin.html">Sign in</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End: Navigation wrapper -->   
+    </header>
+    <!-- End: HEADER -->
+    <!-- Start: MAIN CONTENT -->
+    <div class="content">
+      <!-- Start: slider -->
+				<div class="item">
+					<div class="hero-unit">
+						<div class="row-fluid">
+							<div class="span7">
+								<h3>Tell us know your need!!!</h3>
+								<br/><br/>
+									<div id="addrow">
+										<input type="button" name="addbtn" id="addbtn" value="Add More!">
+										</input>
+									</div>
+									<br>
+									<form class="form-inline" id="needSubmit"  method="POST" action="needSubmit.php">
+									<fieldset id="lunches"> 
+										<div class="formrow">
+											<select name="lunch[]" class="dropdown">
+												<option value="">Select a lunch item</option>
+												<option value="baloney">Baloney</option>
+												<option value="yogurt">Yogurt</option>
+												<option value="apple">Apple</option>
+												<option value="cheese">Government Cheese</option>
+											</select>
+											<label class="checkbox">
+												<input type="checkbox" id = "learn"/> Learn
+											</label>
+											<label class="checkbox">
+												<input type="checkbox" id = "share"/> Share
+											</label>
+											<label class="checkbox">
+												<input type="checkbox" id = "teach"/> Teach
+											</label>
+										</div>
+									</fieldset>
+									<div class="form-actions">
+										<!--input type=”hidden” name=”save” value=”contact”-->
+										<button type=”submit” class=”btn btn-primary”>Submit</button>									
+									</div>  
+								</form>
+							</div>
+							<div class="span5">
+							    <div class="slider">
+									<div class="container-fluid">
+										<div id="heroSlider1" class="carousel slide">
+											<div class="carousel-inner">
+												<div class="active item">
+													<div class="hero-unit">
+														<div class="row-fluid">
+															<div class="span12">
+																<img src="img/placeholder.jpg" class="thumbnail">
+															</div>
+														</div>
+													</div>	
+												</div>
+												<div class="item">
+													<div class="hero-unit">
+														<div class="row-fluid">
+															<div class="span12">
+																<img src="img/placeholder.jpg" class="thumbnail">
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+								            <a class="left carousel-control" href="#heroSlider1" data-slide="prev">‹</a>
+											<a class="right carousel-control" href="#heroSlider1" data-slide="next">›</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+      <!-- Start: Our Solutions -->
+      <div class="container">
+          <div class="page-header">
+            <h2>Upcoming Sessions</h2>
+          </div>
+          <div class="row-fluid">
+            <ul class="thumbnails">
+              <li class="span4">
+                <div class="thumbnail">
+                  <img src="img/placeholder-360x200.jpg" alt="product name">
+                  <div class="caption">
+                    <h3>For Learners & Teachers</h3>
+                    <p>
+                      Whether you want to learn, share or teach we have solution for you.
+					  Come join the India's biggest network of multi-skill people!!!
+					  <br/><br/>
+                    </p>
+                  </div>
+                  <div class="widget-footer">
+                    <p>
+                      <a href="#JoinNow" class="btn btn-primary">JOIN NOW</a>&nbsp;
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="span4">
+                <div class="thumbnail">
+                  <img src="img/placeholder-360x200.jpg" alt="product name">
+                  <div class="caption">
+                    <h3>For Institutes</h3>
+                    <p>
+						If you are a institute specialized in teaching of any kind of skill,
+						then you are at the right place. Partner us & get the best students.
+						
+						What more! We offer range of services. Get in touch now!!!
+					</p>
+                  </div>
+                  <div class="widget-footer">
+                    <p>
+                      <a href="#" class="btn btn-primary">PARTNER US</a>&nbsp;
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="span4">
+                <div class="thumbnail">
+                  <img src="img/placeholder-360x200.jpg" alt="product name">
+                  <div class="caption">
+                    <h3>Marketplace</h3>
+                    <p>
+                      Looking for your next Guitar, Cycle but worried of initial expense?
+					  Hover to the Marketplace & rent your stuff. Quality Assured!!! 
+					  
+					  You can also place your existing stuff on rent!!!
+                    </p>
+                  </div>
+                  <div class="widget-footer">
+                    <p>
+                      <a href="#" class="btn btn-primary">GO TO MARKETPLACE</a>&nbsp;
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      <!-- End: PRODUCT LIST -->
+    </div>
+    <!-- End: MAIN CONTENT -->
+    <!-- Start: FOOTER -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="span2">
+            <h4><i class="icon-star icon-white"></i>HOBBIES</h4>
+            <nav>
+              <ul class="quick-links">
+                <li><a href="product.html">Fitness</a></li>
+                <li><a href="product.html">Outdoor</a></li>
+                <li><a href="product.html">Creative Art</a></li>
+                <li><a href="all_products.html">Music & Dance</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="span2">
+            <h4><i class="icon-beaker icon-white"></i> About</h4>
+            <nav>
+              <ul class="quick-links">
+                <li><a href="our_works.html">Our works</a></li>
+                <li><a href="patnerships.html">Partners</a></li>
+                <li><a href="leadership.html">Leadership</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="blog.html">Blog</a></li>
+              <ul>
+            </nav>          
+          </div>
+          <div class="span2">
+            <h4><i class="icon-thumbs-up icon-white"></i> Support</h4>
+            <nav>
+              <ul class="quick-links">
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact_us.html">Contact us</a></li>            
+              </ul>
+            </nav>
+          </div>
+          <div class="span3">
+            <h4>Get in touch</h4>
+            <div class="social-icons-row">
+              <a href="#"><i class="icon-twitter"></i></a>
+              <a href="#"><i class="icon-facebook"></i></a>
+              <a href="#"><i class="icon-linkedin"></i></a>                                         
+            </div>
+            <div class="social-icons-row">
+              <a href="#"><i class="icon-google-plus"></i></a>              
+              <a href="#"><i class="icon-github"></i></a>
+              <a href="mailto:varhatia@gmail.com"><i class="icon-envelope"></i></a>        
+            </div>
+            <div class="social-icons-row">
+              <i class="icon-phone icon-large phone-number"></i> +919591636555
+            </div>
+          </div>      
+          <div class="span3">
+            <h4>Get updated by email</h4>
+            <form>
+              <input type="text" name="email" placeholder="Email address">
+              <input type="submit" class="btn btn-primary" value="Subscribe">
+            </form>
+          </div>
+        </div>
+      </div>
+      <hr class="footer-divider">
+      <div class="container">
+        <p>
+          &copy; 2013 HobbyMate, Inc. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+    <!-- End: FOOTER -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/boot-business.js"></script>
+    <script type="text/javascript" src="js/utilities.js"></script>
+    <script type="text/javascript" src="js/addelements.js"></script>
+
+  </body>
+</html>
