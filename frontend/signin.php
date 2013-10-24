@@ -1,29 +1,36 @@
 <?php
-include 'common/header.php';
+include_once 'common/header.php';
 session_start();
 ?>
     <!-- Start: MAIN CONTENT -->
     <div class="content">
       <div class="container">
         <div class="page-header">
-          <h1>Signup to HobbyMate</h1>
+          <h1>Signin to HobbyMate</h1>
         </div>
         <div class="row">
           <div class="span6 offset3">
-            <h4 class="widget-header"><i class="icon-gift"></i> Be a part of HobbyMate</h4>
+            <h4 class="widget-header"><i class="icon-lock"></i> Signin to HobbyMate</h4>
             <div class="widget-body">
               <div class="center-align">
-                <form class="form-horizontal form-signin-signup" action="/hbbymt/backend/login.php" method="post">
-                  <input type="hidden" name="action" value="create">
+                <form class="form-horizontal form-signin-signup">
                   <input type="text" name="username" placeholder="Email">
                   <input type="password" name="password" placeholder="Password">
-                  <input type="password" name="password_confirmation" placeholder="Password Confirmation">
-                  <div>
-                    <input type="submit" value="Signup" class="btn btn-primary btn-large">
+                  <div class="remember-me">
+                    <div class="pull-left">
+                      <label class="checkbox">
+                        <input type="checkbox"> Remember me
+                      </label>
+                    </div>
+                    <div class="pull-right">
+                      <a href="#">Forgot password?</a>
+                    </div>
+                    <div class="clearfix"></div>
                   </div>
+                  <input type="submit" value="Signin" class="btn btn-primary btn-large">
                 </form>
-                <h4><i class="icon-question-sign"></i> Already have an account?</h4>
-                <a href="signin.html" class="btn btn-large bottom-space">Signin</a>
+                <h4><i class="icon-question-sign"></i> Don't have an account?</h4>
+                <a href="signup.php" class="btn btn-large bottom-space">Signup</a>
                 <h4><i class="icon-thumbs-up"></i> Sign in with third party account</h4>
                 <ul class="signin-with-list">
                   <li>
@@ -58,7 +65,9 @@ session_start();
       </div>
     </div>
     <!-- End: MAIN CONTENT -->
- <?php
+
+
+<?php
 include_once 'common/footer.php';
 ?>
     
