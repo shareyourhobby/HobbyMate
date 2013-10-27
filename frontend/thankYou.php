@@ -7,41 +7,12 @@ include_once 'common/header.php';
 			<div class="hero-unit">
 				<div class="row-fluid">
 					<div class="span7">
-						<h3>Tell us know your need!!!</h3>
-						<br/><br/>
-								<form class="form-inline" id="needSubmit"  method="POST" action="needSubmit.php">
-									<fieldset id="hobbies"> 
-										<div class="formrow">
-											<select name="hobby[]" class="dropdown">
-												<option value="">Select hobby</option>
-												<option value="guitar">Guitar</option>
-												<option value="painting">Painting</option>
-												<option value="yoga">Yoga</option>
-												<option value="aerobics">Aerobics</option>
-											</select>
-											<label class="checkbox">
-												<input type="checkbox" name = "learn"/> Learn
-											</label>
-											<label class="checkbox">
-												<input type="checkbox" name = "share"/> Share
-											</label>
-											<label class="checkbox">
-												<input type="checkbox" name = "teach"/> Teach
-											</label>
-										</div>
-									</fieldset>
-									<div class="form-actions">
-										<!--input type=”hidden” name=”save” value=”contact”-->
-										<button type=”submit” class=”btn btn-primary”>Submit</button>									
-									</div>  
-								</form>
-								
-																	<div id="addrow">
-										<input type="button" name="addbtn" id="addbtn" value="Add More!">
-										</input>
-									</div>
-
-
+					<h1>
+						Thanks a lot for telling us your needs! We will get back to you as soon as possible!
+						
+						Cheers!!!
+						
+					</h1>
 					</div>
 
 					<div class="span5">
@@ -68,8 +39,8 @@ include_once 'common/header.php';
 											</div>
 										</div>
 									</div>
-									<a class="left carousel-control" href="#heroSlider1" data-slide="prev">‹</a>
-									<a class="right carousel-control" href="#heroSlider1" data-slide="next">›</a>
+									<a class="left carousel-control" href="#heroSlider1" data-slide="prev">â€¹</a>
+									<a class="right carousel-control" href="#heroSlider1" data-slide="next">â€º</a>
 								</div>
 							</div>
 						</div>

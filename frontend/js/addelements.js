@@ -26,7 +26,7 @@ function addRow() {
 	delButton.value = 'Delete';
 	U.addEvent(delButton, 'click', function() {removeRow(delButton)});
 	newRow.appendChild(delButton);
-	var fieldset = U.$('lunches');
+	var fieldset = U.$('hobbies');
 	fieldset.appendChild(newRow);
 }
 

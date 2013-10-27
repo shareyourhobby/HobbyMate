@@ -73,5 +73,8 @@
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/boot-business.js"></script>
-  </body>
+	<script type="text/javascript" src="js/addelements.js"></script>
+	<script type="text/javascript" src="js/utilities.js"></script>
+
+	</body>
 </html>

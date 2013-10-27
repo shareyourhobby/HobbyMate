@@ -17,9 +17,10 @@
     <link href="css/font-awesome-ie7.css" rel="stylesheet">
     <!-- Bootbusiness theme -->
     <link href="css/boot-business.css" rel="stylesheet">
+	
   </head>
   <body>
-    <!-- Start: HEADER -->
+	<!-- Start: HEADER -->
     <header>
       <!-- Start: Navigation wrapper -->
       <div class="navbar navbar-fixed-top">

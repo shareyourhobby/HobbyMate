@@ -1,6 +1,6 @@
 <?php
 include 'common/header.php';
-session_start();
+
 ?>
     <!-- Start: MAIN CONTENT -->
     <div class="content">
@@ -13,7 +13,7 @@ session_start();
             <h4 class="widget-header"><i class="icon-gift"></i> Be a part of HobbyMate</h4>
             <div class="widget-body">
               <div class="center-align">
-                <form class="form-horizontal form-signin-signup" action="/hbbymt/backend/login.php" method="post">
+                <form class="form-horizontal form-signin-signup" action="backend/login.php" method="post">
                   <input type="hidden" name="action" value="create">
                   <input type="text" name="username" placeholder="Email">
                   <input type="password" name="password" placeholder="Password">
