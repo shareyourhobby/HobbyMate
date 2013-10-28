@@ -42,15 +42,25 @@ if($action == 'verify') {
 } else if($action == 'create') {
 	
         $sql="insert into login (username,password,verified) values ('$username','$password', 0)";
+        
         $result=mysql_query($sql);
         if($result) {
-                $_SESSION['username'] = $username ; 
-                echo " created the user, take him to JoinNow. Code for cookie/session ???";
-				include('../JoinNow.php');
+        		$uid = mysql_insert_id($link) ;
+                $_SESSION['username'] = $username ;
+                $_SESSION['uid'] = $uid ;
+                header("location:../frontend/JoinNow.php");
         }else {
-                echo "unable to save the result..." ;
+        		$checkLogin = "select count(*) from login where username='"+$username+"'" ;
+        		$result=mysql_query($sql);
+        		$count=mysql_num_rows($result);
+        		if($count>0) {
+        			$_REQUEST["errormsg"] = "userid $uid already exists." ;
+                	header("location:../frontend/signin.php");
+        		} else {
+        			$_REQUEST["errormsg"] = 'There is some problem with signup. Please try after sometime.' ;
+                	header("location:../frontend/signup.php");
+        		}
         }
-        
 }
 mysql_close($link);
 ?>

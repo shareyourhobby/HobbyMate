@@ -1,7 +1,7 @@
 <?php
 // connect to the database
 
-$config_array = parse_ini_file("config/config.ini");
+$config_array = parse_ini_file("../config/config.ini");
 $host=$config_array['host'];
 $dbusername=$config_array['username']; 
 $dbpassword=$config_array['password']; 
@@ -23,6 +23,7 @@ if ($cnt > 0) {
 
 	if(isset($_SESSION['username']))
 	{
+		
 		//include(signup.php);	
 	}
 	else

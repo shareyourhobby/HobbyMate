@@ -12,6 +12,11 @@ include_once 'common/header.php';
             <h4 class="widget-header"><i class="icon-lock"></i> Signin to HobbyMate</h4>
             <div class="widget-body">
               <div class="center-align">
+              <?php 
+              	if (isset($_REQUEST['errormsg'])) {
+              		echo $_REQUEST['errormsg'] ;		
+              	}
+              ?>
                 <form class="form-horizontal form-signin-signup">
                   <input type="text" name="username" placeholder="Email">
                   <input type="password" name="password" placeholder="Password">
