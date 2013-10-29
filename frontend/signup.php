@@ -1,7 +1,10 @@
 <?php
 include 'common/header.php';
-
+session_start();
 ?>
+
+<script type="text/javascript" src="js/validator.js"></script><!--
+
     <!-- Start: MAIN CONTENT -->
     <div class="content">
       <div class="container">
@@ -13,6 +16,14 @@ include 'common/header.php';
             <h4 class="widget-header"><i class="icon-gift"></i> Be a part of HobbyMate</h4>
             <div class="widget-body">
               <div class="center-align">
+              <?php
+    	          	if (isset($_SESSION['errormsg'])) {
+	       		?>
+        		      	<span style="color: red;"><?php 	echo $_SESSION['errormsg'] ;?></span>	
+              	<?php
+              		 unset($_SESSION['errormsg']) ;
+              		}
+              	?>
                 <form class="form-horizontal form-signin-signup" action="/hbbymt/backend/login.php" method="post">
                   <input type="hidden" name="action" value="create">
                   <input type="text" name="username" placeholder="Email">
@@ -23,7 +34,8 @@ include 'common/header.php';
                   </div>
                 </form>
                 <h4><i class="icon-question-sign"></i> Already have an account?</h4>
-                <a href="signin.html" class="btn btn-large bottom-space">Signin</a>
+                <a href="signin.php" class="btn btn-large bottom-space">Signin</a>
+                <!-- 
                 <h4><i class="icon-thumbs-up"></i> Sign in with third party account</h4>
                 <ul class="signin-with-list">
                   <li>
@@ -51,6 +63,7 @@ include 'common/header.php';
                     </a>
                   </li>
                 </ul>
+                 -->
               </div>
             </div>
           </div>

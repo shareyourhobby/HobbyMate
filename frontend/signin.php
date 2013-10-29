@@ -1,5 +1,6 @@
 <?php
 include_once 'common/header.php';
+session_start();
 ?>
     <!-- Start: MAIN CONTENT -->
     <div class="content">
@@ -12,13 +13,18 @@ include_once 'common/header.php';
             <h4 class="widget-header"><i class="icon-lock"></i> Signin to HobbyMate</h4>
             <div class="widget-body">
               <div class="center-align">
-              <?php 
-              	if (isset($_REQUEST['errormsg'])) {
-              		echo $_REQUEST['errormsg'] ;		
-              	}
-              ?>
-                <form class="form-horizontal form-signin-signup">
-                  <input type="text" name="username" placeholder="Email">
+               <?php
+    	          	if (isset($_SESSION['errormsg'])) {
+	       		?>
+        		      	<span style="color: red;"><?php 	echo $_SESSION['errormsg'] ;?></span>	
+              	<?php
+              		 unset($_SESSION['errormsg']) ;
+              		}
+              	?>
+
+                <form class="form-horizontal form-signin-signup" action="/hbbymt/backend/login.php" method="post">
+                  <input type="hidden" name="action" value="verify">
+                   <input type="text" name="username" placeholder="Email">
                   <input type="password" name="password" placeholder="Password">
                   <div class="remember-me">
                     <div class="pull-left">
@@ -35,6 +41,7 @@ include_once 'common/header.php';
                 </form>
                 <h4><i class="icon-question-sign"></i> Don't have an account?</h4>
                 <a href="signup.php" class="btn btn-large bottom-space">Signup</a>
+                <!-- 
                 <h4><i class="icon-thumbs-up"></i> Sign in with third party account</h4>
                 <ul class="signin-with-list">
                   <li>
@@ -62,6 +69,7 @@ include_once 'common/header.php';
                     </a>
                   </li>
                 </ul>
+                 -->
               </div>
             </div>
           </div>
