@@ -1,5 +1,6 @@
 <?php
 include_once 'common/header.php';
+session_start();
 ?>
 <!DOCTYPE html>
 
