@@ -1,6 +1,5 @@
 <?php
 ?>
-
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -55,9 +54,9 @@
                     <li><a href="product.php">Guitar</a></li>
                     <li><a href="product.php">Flute</a></li>
 					<li><a href="product.php">Keyboard</a></li>
-					<li><a href="product.php">Salsa</a></li>
-					<li><a href="all_services.php">More Music & Dance</a></li>
-                    <li class="divider"></li>
+									<li><a href="product.php">Salsa</a></li>
+									<li><a href="all_services.php">More Music & Dance</a></li>
+									<li class="divider"></li>
                     <li class="nav-header">Creative</li>
 					<li><a href="product.php">Painting</a></li>
                     <li><a href="product.php">Cooking</a></li>
@@ -86,7 +85,16 @@
                 <li><a href="faq.php">FAQ</a></li>
                 <li><a href="contact_us.php">Contact us</a></li>
                 <li><a href="signup.php">Sign up</a></li>
-                <li><a href="signin.php">Sign in</a></li>
+				<li><a href="signin.php">Sign in</a></li>
+                <!--  li class="dropdown">
+                  < ?php include_once 'displayUser.php'; ?-->
+                  <!-- a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <b class="caret"></b></a>
+				  <ul class="dropdown-menu">
+				  <li><a href="signup.php">Sign up</a></li>
+				  <li><a href="signin.php">Sign in</a></li>
+				  </ul>			
+                </li-->
               </ul>
             </div>
           </div>
@@ -95,4 +103,3 @@
       <!-- End: Navigation wrapper -->   
     </header>
     <!-- End: HEADER -->
-
