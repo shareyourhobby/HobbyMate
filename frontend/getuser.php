@@ -2,7 +2,7 @@
 $con = mysqli_connect('localhost','root','root');
 if (!$con)
 {
-die('Could not connect: ' . mysqli_error($con));
+	die('Could not connect: ' . mysqli_error($con));
 }
 
 mysqli_select_db($con,"hbmt");
@@ -17,14 +17,14 @@ while($row = mysqli_fetch_array($result))
 			<div class=\"thumbnail\">
 			<img src=\"img/placeholder-260x150.jpg\" alt=\"product name\">
 			<div class=\"caption\">";
-			echo  "<h3>". $row['username'] ."</h3>";
-			echo  "<p>
+	echo  "<h3>". $row['username'] ."</h3>";
+	echo  "<p>
 			//User Comment {Currently not in DB}
-				  </p>
+			</p>
 			</div>
 			<div class=\"widget-footer\">
 			<p>
-			  <a href=\"product.html\" class=\"btn\">Read more</a>
+			<a href=\"product.html\" class=\"btn\">Read more</a>
 			</p>
 			</div>
 			</div>

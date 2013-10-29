@@ -16,7 +16,7 @@ include_once 'common/header.php';
 					<div class="span2">
 					</div>
 					<div class="span2">
-						<a href="JoinNow.php" class="btn btn-primary" align="left">JOIN US</a>&nbsp;
+						<a href="JoinNow.php" class="btn btn-primary">JOIN US</a>&nbsp;
 						<br/><br/>
 						<br/><br/>
 						<a href="#" class="btn btn-primary">PARTNER US</a>&nbsp;

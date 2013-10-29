@@ -1,71 +1,23 @@
 <?php
 include_once 'common/header.php';
-session_start();
 ?>
 <!DOCTYPE html>
 
 <!-- Start: MAIN CONTENT -->
 <div
 	class="content">
-	<!-- Start: slider -->
-	<!--div class="row-fluid">
-							<div class="span6 marketting-info">
-								<h3>We at HobbyMate aim to connect people of similar skills & provide a platform to
-								people who would like to explore their hidden talents.</h3>
-								<h3>
-								<a href="product.html" class="btn">Learn more</a>
-								</h3>                      
-							</div>
-							<div class="span6">
-								<img src="img/placeholder.jpg" class="thumbnail">
-							</div>
-						</div-->
 	<div class="item">
 		<div class="hero-unit">
 			<div class="row-fluid">
 				<div class="span6 marketting-info">
 					<h1>Welcome</h1>
-					<h3>
-						<?php echo ($_SESSION['username']) ?>
-					</h3>
 					<h3>We at HobbyMate aim to connect people of similar skills &
 						provide a platform to people who would like to explore their
 						hidden talents.</h3>
 					<a href="learnMore.php" class="btn btn-primary">Learn more</a>
-					<!--a href="product.html" class="btn">Learn more</a-->
-
-
 				</div>
 				<div class="span6">
-					<div class="slider">
-						<div class="container-fluid">
-							<div id="heroSlider1" class="carousel slide">
-								<div class="carousel-inner">
-									<div class="active item">
-										<div class="hero-unit">
-											<div class="row-fluid">
-												<div class="span12">
-													<img src="img/placeholder.jpg" class="thumbnail">
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="item">
-										<div class="hero-unit">
-											<div class="row-fluid">
-												<div class="span12">
-													<img src="img/placeholder.jpg" class="thumbnail">
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<a class="left carousel-control" href="#heroSlider1"
-									data-slide="prev">‹</a> <a class="right carousel-control"
-									href="#heroSlider1" data-slide="next">›</a>
-							</div>
-						</div>
-					</div>
+					<?php include_once 'slideshow.php';?>				
 				</div>
 			</div>
 		</div>

@@ -75,6 +75,12 @@
     <script type="text/javascript" src="js/boot-business.js"></script>
 	<script type="text/javascript" src="js/addelements.js"></script>
 	<script type="text/javascript" src="js/utilities.js"></script>
-
+	<!-- >script>
+	$('[data-toggle="tooltip"]').tooltip({
+	    'placement': 'top'
+	});
+	
+	</script-->
+	
 	</body>
 </html>

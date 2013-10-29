@@ -16,34 +16,7 @@ include_once 'common/header.php';
 					</div>
 
 					<div class="span5">
-						<div class="slider">
-							<div class="container-fluid">
-								<div id="heroSlider1" class="carousel slide">
-									<div class="carousel-inner">
-										<div class="active item">
-											<div class="hero-unit">
-												<div class="row-fluid">
-													<div class="span12">
-														<img src="img/placeholder.jpg" class="thumbnail">
-													</div>
-												</div>
-											</div>	
-										</div>
-										<div class="item">
-											<div class="hero-unit">
-												<div class="row-fluid">
-													<div class="span12">
-														<img src="img/placeholder.jpg" class="thumbnail">
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<a class="left carousel-control" href="#heroSlider1" data-slide="prev">‹</a>
-									<a class="right carousel-control" href="#heroSlider1" data-slide="next">›</a>
-								</div>
-							</div>
-						</div>
+						<?php include_once 'slideshow.php';?>
 					</div>
 				</div>
 			</div>

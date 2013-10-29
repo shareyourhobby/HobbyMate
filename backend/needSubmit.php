@@ -3,15 +3,15 @@
 
 $config_array = parse_ini_file("../config/config.ini");
 $host=$config_array['host'];
-$dbusername=$config_array['username']; 
-$dbpassword=$config_array['password']; 
+$dbusername=$config_array['username'];
+$dbpassword=$config_array['password'];
 $db_name=$config_array['db'];
 session_start();
 
 $link = mysql_connect("$host", "$dbusername", "$dbpassword");
 if (!$link)
 {
-die('Could not connect: ' . mysqli_error($link));
+	die('Could not connect: ' . mysqli_error($link));
 }
 
 mysql_select_db("$db_name")or die("cannot select DB ".mysql_error($link));
@@ -23,17 +23,16 @@ if ($cnt > 0) {
 
 	if(isset($_SESSION['username']))
 	{
-		
-		//include(signup.php);	
+		//include(signup.php);
 	}
 	else
 	{
-		include('signup.php');	
+		header("location:../frontend/signup.php");
 	}
-	
+
 	$username = $_SESSION['username'];
 	//echo "<h3>". $username ."</h3>";
-	
+
 	$success = false;
 	for($i=0;$i<$cnt;$i++)
 	{
@@ -60,14 +59,14 @@ if ($cnt > 0) {
 
 		$query="INSERT INTO hobbydetails ( learn, share, teach, hobbyname, username) VALUES (FALSE , TRUE , FALSE , '$hbname', '$username')";
 		mysql_query($query) or trigger_error("Insert failed: " . mysql_error());
-		
+
 		$success = true;
 	}
-	
+
 	if($success)
 	{
-		include('thankYou.php');
+			header("location:../frontend/thankYou.php");
 	}
 }
 mysql_close($link);
-?> 
+?>
