@@ -1,7 +1,25 @@
 <?php
 include_once 'common/header.php';
+session_start();
 ?>
 <!-- Start: MAIN CONTENT -->
+
+<script type="text/javascript">
+function verifySubmit() {
+	$('input:checkbox').each(function(index, element) {
+		if(element.checked) {
+			element.value = "1" ;
+			
+		}else {
+			element.value = "0" ;
+			element.checked = true;
+		}
+	}) ;
+
+	return true ;
+	
+}
+</script>
 <div
 	class="content">
 	<div class="item">
@@ -10,6 +28,14 @@ include_once 'common/header.php';
 				<div class="span7">
 					<h3>Tell us know your need!!!</h3>
 					<br /> <br />
+					<?php
+    	          	if (isset($_SESSION['errormsg'])) {
+	       			?>
+        		      	<span style="color: red;"><?php 	echo $_SESSION['errormsg'] ;?></span>	
+              	<?php
+              		 unset($_SESSION['errormsg']) ;
+              		}
+              	?>
 					<form class="form-inline" id="needSubmit" method="POST"
 						action="../backend/needSubmit.php">
 						<fieldset id="hobbies">
@@ -22,19 +48,20 @@ include_once 'common/header.php';
 									<option value="aerobics">Aerobics</option>
 								</select> 
 								<label class="checkbox" data-toggle="tooltip" title="If you want to learn this hobby! HobbyMate assures you of best learning experience!!!"> <input type="checkbox"
-									name="learn" /> Learn
+									name="learn[]" /> Learn
 								</label> 
 								<label class="checkbox" data-toggle="tooltip" title="If you consider yourself at intermediate level & would like to improve through sharing with others like you!"> <input type="checkbox"
-									name="share" /> Share
+									name="share[]"  /> Share
 								</label> 
-								<label class="checkbox" data-toggle="tooltip" title="If you consider yourself at expert level & would like to teach others! Through HobbyMate support you can earn hell lot of money for doing this!!!"> <input type="checkbox"
-									name="teach" /> Teach
+								<label class="checkbox" data-toggle="tooltip" title="If you consider yourself at expert level & would like to teach others! Through HobbyMate support you can earn hell lot of money for doing this!!!"> 
+								<input type="checkbox"
+									name="teach[]"   /> Teach
 								</label>
 							</div>
 						</fieldset>
 						<div class="form-actions">
 							<!--input type=”hidden” name=”save” value=”contact”-->
-							<button type="submit" class=”btnbtn-primary”>Submit</button>
+							<button type="submit" class=”btnbtn-primary” onclick="verifySubmit()">Submit</button>
 						</div>
 					</form>
 
