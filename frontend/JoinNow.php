@@ -26,6 +26,13 @@ function verifySubmit() {
 		<div class="hero-unit">
 			<div class="row-fluid">
 				<div class="span7">
+					<?php 
+						if(!isset($_SESSION["uid"])) {
+					?>
+					<h3 style="color: blue;">Please <a href="signin.php">Sign in</a> to submit your hobbies.</h3>
+					<?php 		
+						}
+					?>
 					<h3>Tell us know your need!!!</h3>
 					<br /> <br />
 					<?php

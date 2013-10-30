@@ -28,25 +28,7 @@ include_once 'common/header.php';
 			</div>
 		</div>
 
-		<div class="container">
-        <div class="page-header">
-			<h2>People On HobbyMate</h2>
-    				<!--PHP call-->
-				<!--script>
-					addLoadEvent(dispalyUsers);
-				</script-->
-	
-	<!--span id="txtHint"></span-->
-
-			<?php
-			include_once 'happyUser.php';
-			?>			
-        </div>
-		
-    </div>
-      <!-- End: PRODUCT LIST -->
-    </div>
-    <!-- End: MAIN CONTENT -->
+		    <!-- End: MAIN CONTENT -->
 <?php
 include_once 'common/footer.php';
 ?>

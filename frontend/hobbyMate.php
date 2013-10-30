@@ -15,7 +15,7 @@ session_start();
 					<h3>We at HobbyMate aim to connect people of similar skills &
 						provide a platform to people who would like to explore their
 						hidden talents.</h3>
-					<a href="learnMore.php" class="btn btn-primary">Learn more</a>
+					<a href="JoinNow.php" class="btn btn-primary">Join US</a>
 				</div>
 				<div class="span6">
 					<?php include_once 'slideshow.php';?>				
@@ -43,7 +43,7 @@ session_start();
 						</div>
 						<div class="widget-footer">
 							<p>
-								<a href="JoinNow.html" class="btn btn-primary">JOIN NOW</a>&nbsp;
+								<a href="JoinNow.php" class="btn btn-primary">JOIN NOW</a>&nbsp;
 							</p>
 						</div>
 					</div>

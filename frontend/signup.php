@@ -3,9 +3,19 @@ include 'common/header.php';
 session_start();
 ?>
 
-<script type="text/javascript" src="js/validator.js"></script><!--
+<script type="text/javascript" src="js/validator.js"></script>
 
-    <!-- Start: MAIN CONTENT -->
+<script type="text/javascript">
+function verifySubmit() {
+	if(checkEmail($('[name="username"]').attr('value'))) {
+		return validatepwd($('[name="password"]').attr('value'),$('[name="password_confirmation"]').attr('value'))
+	}
+	return false ;
+	
+}
+
+</script>
+       <!-- Start: MAIN CONTENT -->
     <div class="content">
       <div class="container">
         <div class="page-header">
@@ -24,13 +34,13 @@ session_start();
               		 unset($_SESSION['errormsg']) ;
               		}
               	?>
-                <form class="form-horizontal form-signin-signup" action="/hbbymt/backend/login.php" method="post">
+                <form class="form-horizontal form-signin-signup" action="../backend/login.php" method="post" onsubmit="return verifySubmit();">
                   <input type="hidden" name="action" value="create">
                   <input type="text" name="username" placeholder="Email">
                   <input type="password" name="password" placeholder="Password">
                   <input type="password" name="password_confirmation" placeholder="Password Confirmation">
                   <div>
-                    <input type="submit" value="Signup" class="btn btn-primary btn-large">
+                    <input type="submit" value="Signup" class="btn btn-primary btn-large"  >
                   </div>
                 </form>
                 <h4><i class="icon-question-sign"></i> Already have an account?</h4>
