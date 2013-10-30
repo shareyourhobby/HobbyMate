@@ -46,15 +46,15 @@ include_once 'common/header.php';
 				<h3>India</h3>
 				<div>
 					<address class="pull-left">
-						<strong>HobbyMate, Inc.</strong><br> IIM Bangalore<br> Karnataka<br>
+						<strong>HobbyMate, Inc.</strong><br> Bangalore<br> Karnataka<br>
 					</address>
 					<div class="pull-right">
 						<div class="bottom-space">
-							<i class="icon-phone icon-large"></i> (+91) 9591636555
+							<i class="icon-phone icon-large"></i> 
 						</div>
-						<a href="mailto:varhatia@gmail.com" class="contact-mail"> <i
+						<a href="mailto:shareurhobby@gmail.com" class="contact-mail"> <i
 							class="icon-envelope icon-large"></i>
-						</a> varhatia@gmail.com
+						</a> shareurhobby@gmail.com
 					</div>
 					<div class="clearfix"></div>
 				</div>

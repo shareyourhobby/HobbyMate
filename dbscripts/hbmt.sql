@@ -46,6 +46,11 @@ COMMENT = 'This table contains hobby details';
 
 ALTER TABLE `hbmt`.`hobbydetails` CHANGE COLUMN `learn` `learn` TINYINT NULL DEFAULT '0'  , CHANGE COLUMN `share` `share` TINYINT NULL DEFAULT '0'  , CHANGE COLUMN `teach` `teach` TINYINT NULL DEFAULT '0'  ;
 
+
 -- create the unique index...
 CREATE UNIQUE INDEX uidhb ON hobbydetails(uid, hobbyname);
 
+-- Add timestamp field in login & hobbydetails
+ALTER TABLE `hbmt`.`login` ADD COLUMN `created_date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP  AFTER `verified` ;
+
+ALTER TABLE `hbmt`.`hobbydetails` ADD COLUMN `created_date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP  ;
