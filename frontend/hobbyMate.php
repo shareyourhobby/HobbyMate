@@ -32,7 +32,8 @@ session_start();
 			<ul class="thumbnails">
 				<li class="span4">
 					<div class="thumbnail">
-						<img src="img/placeholder-360x200.jpg" alt="product name">
+						<img src="img/joinUs.jpg" alt="product name">
+						<br/>
 						<div class="caption">
 							<h3>For Learners & Teachers</h3>
 							<p>
@@ -50,11 +51,11 @@ session_start();
 				</li>
 				<li class="span4">
 					<div class="thumbnail">
-						<img src="img/placeholder-360x200.jpg" alt="product name">
+						<img src="img/partner.jpg" alt="product name">
 						<div class="caption">
 							<h3>For Institutes</h3>
-							<p>If you are a institute specialized in teaching of any kind of
-								skill, then you are at the right place. Partner us and get the
+							<p>If you are a institute specialized in teaching any kind of
+								skill, then HobbyMate is the right place for you. Partner us and get the
 								best students. What more! We offer range of services. Get in
 								touch now!!!</p>
 						</div>
@@ -67,13 +68,15 @@ session_start();
 				</li>
 				<li class="span4">
 					<div class="thumbnail">
-						<img src="img/placeholder-360x200.jpg" alt="product name">
+						<img src="img/forum.jpg" alt="product name">
 						<div class="caption">
-							<h3>Marketplace</h3>
-							<p>Looking for your next Guitar, Cycle but worried of initial
-								expense? Hover to the Marketplace and rent your stuff. Quality
-								Assured!!! You can also place your existing stuff on rent!!!</p>
+							<h3>Discussion Forum</h3>
+							<p>At HobbyMate, we beleive in healthy discussion.
+							   Login to forum & discuss the activity of your interest with others.
+							   Start Now!!!
+							   </p>
 						</div>
+						<br/>
 						<div class="widget-footer">
 							<p>
 								<a href="#" class="btn btn-primary">GO TO MARKETPLACE</a>&nbsp;

@@ -96,7 +96,7 @@ if (!isset($_SESSION)) {
                 <b class="caret"></b>
                 </a>
 				  <ul class="dropdown-menu">
-				  <li><a href="/hbbymt/backend/logout.php">logout</a></li>
+				  <li><a href="../backend/logout.php">logout</a></li>
 				  
 				  </ul>			
 				</li>                
@@ -106,7 +106,7 @@ if (!isset($_SESSION)) {
                 
                 		<li><a href="signup.php">Sign up</a></li>
 						<li><a href="signin.php">Sign in</a></li>
-						<li>Welcome Guest</li>
+						<li><a href="hobbyMate.php">Welcome Guest</a></li>
                 <?php 		
                 	}
                 
