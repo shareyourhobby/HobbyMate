@@ -1,6 +1,6 @@
 <?php
 // connect to the database
-
+session_start();
 $config_array = parse_ini_file("../config/config.ini");
 $host=$config_array['host'];
 $dbusername=$config_array['username'];
@@ -30,7 +30,14 @@ if ($cnt > 0) {
 		header("location:../frontend/signup.php");
 	}
 
-	$username = $_SESSION['username'];
+	if(isset($_SESSION['username']))
+			{
+		$username = $_SESSION['username'];
+			}
+			else
+			{
+				$username = 'GUEST';
+			}
 	//echo "<h3>". $username ."</h3>";
 
 	$success = false;
@@ -41,23 +48,35 @@ if ($cnt > 0) {
 
 		if(isset($_POST['learn'][$i]))
 		{
-			$learn = $_POST['learn'][$i];
+			$learn = 'TRUE';
 			//echo "Learn : $learn";
+		}
+		else
+		{
+			$learn = 'FALSE';
 		}
 
 		if(isset($_POST['share'][$i]))
 		{
-			$share = $_POST['share'][$i];
+			$share = 'TRUE';
 			//echo "Share : $share";
+		}
+		else
+		{
+			$share = 'FALSE';
 		}
 
 		if(isset($_POST['teach'][$i]))
 		{
-			$teach = $_POST['teach'][$i];
+			$teach = 'TRUE';
 			//echo "Teach : $teach";
 		}
+		else
+		{
+			$teach = 'FALSE';
+		}
 
-		$query="INSERT INTO hobbydetails ( learn, share, teach, hobbyname, username) VALUES (FALSE , TRUE , FALSE , '$hbname', '$username')";
+		$query="INSERT INTO hobbydetails ( learn, share, teach, hobbyname, username) VALUES ($learn , $share , $teach , '$hbname', '$username')";
 		mysql_query($query) or trigger_error("Insert failed: " . mysql_error());
 
 		$success = true;

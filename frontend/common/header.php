@@ -84,17 +84,9 @@
                 </li>
                 <li><a href="faq.php">FAQ</a></li>
                 <li><a href="contact_us.php">Contact us</a></li>
-                <li><a href="signup.php">Sign up</a></li>
-				<li><a href="signin.php">Sign in</a></li>
-                <!--  li class="dropdown">
-                  < ?php include_once 'displayUser.php'; ?-->
-                  <!-- a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <b class="caret"></b></a>
-				  <ul class="dropdown-menu">
-				  <li><a href="signup.php">Sign up</a></li>
-				  <li><a href="signin.php">Sign in</a></li>
-				  </ul>			
-                </li-->
+                <!-- li><a href="signup.php">Sign up</a></li>
+				<li><a href="signin.php">Sign in</a></li-->
+				<li class="dropdown"><?php include_once 'displayUser.php'; ?></li>
               </ul>
             </div>
           </div>
