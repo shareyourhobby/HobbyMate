@@ -26,3 +26,31 @@ CREATE  TABLE `hbmt`.`login` (
   UNIQUE INDEX `username_UNIQUE` (`username` ASC) )
 COMMENT = 'Contains data for user login';
 
+
+-- hobby table
+CREATE  TABLE `hbmt`.`hobbydetails` (
+  `id` INT NOT NULL AUTO_INCREMENT ,
+  `uid` INT NOT NULL ,
+  `hobbyname` VARCHAR(45) NULL ,
+  `learn` BINARY NULL DEFAULT 0 ,
+  `share` BINARY NULL DEFAULT 0 ,
+  `teach` BINARY NULL DEFAULT 0 ,
+  PRIMARY KEY (`id`) ,
+  INDEX `userid_idx` (`uid` ASC) ,
+  CONSTRAINT `userid`
+    FOREIGN KEY (`uid` )
+    REFERENCES `hbmt`.`login` (`id` )
+    ON DELETE CASCADE
+    ON UPDATE NO ACTION)
+COMMENT = 'This table contains hobby details';
+
+ALTER TABLE `hbmt`.`hobbydetails` CHANGE COLUMN `learn` `learn` TINYINT NULL DEFAULT '0'  , CHANGE COLUMN `share` `share` TINYINT NULL DEFAULT '0'  , CHANGE COLUMN `teach` `teach` TINYINT NULL DEFAULT '0'  ;
+
+
+-- create the unique index...
+CREATE UNIQUE INDEX uidhb ON hobbydetails(uid, hobbyname);
+
+-- Add timestamp field in login & hobbydetails
+ALTER TABLE `hbmt`.`login` ADD COLUMN `created_date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP  AFTER `verified` ;
+
+ALTER TABLE `hbmt`.`hobbydetails` ADD COLUMN `created_date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP  ;

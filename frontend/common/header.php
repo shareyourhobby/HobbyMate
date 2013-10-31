@@ -1,4 +1,7 @@
 <?php
+if (!isset($_SESSION)) {
+    session_start();
+}
 ?>
 <html lang="en">
   <head>
@@ -84,9 +87,35 @@
                 </li>
                 <li><a href="faq.php">FAQ</a></li>
                 <li><a href="contact_us.php">Contact us</a></li>
-                <!-- li><a href="signup.php">Sign up</a></li>
-				<li><a href="signin.php">Sign in</a></li-->
-				<li class="dropdown"><?php include_once 'displayUser.php'; ?></li>
+                
+                
+                
+  				<?php if(isset($_SESSION['username']) && !empty($_SESSION['username'])) {?>	              
+                <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo "Welcome ". $_SESSION['username'] ; ?>
+                <b class="caret"></b>
+                </a>
+				  <ul class="dropdown-menu">
+				  <li><a href="/hbbymt/backend/logout.php">logout</a></li>
+				  
+				  </ul>			
+				</li>                
+                <?php 	
+                	}else {
+                ?>		
+                
+                		<li><a href="signup.php">Sign up</a></li>
+						<li><a href="signin.php">Sign in</a></li>
+						<li>Welcome Guest</li>
+                <?php 		
+                	}
+                
+                ?>
+				
+                
+				  
+				  </ul>			
+                </li>
               </ul>
             </div>
           </div>
