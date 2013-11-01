@@ -1,6 +1,6 @@
-
 <?php
 include_once 'common/header.php';
+session_start();
 ?>
 <!-- Start: Main content -->
 <div class="content">

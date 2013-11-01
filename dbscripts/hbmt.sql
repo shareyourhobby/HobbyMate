@@ -1,6 +1,6 @@
 -- Create the database
-CREATE DATABASE  IF NOT EXISTS `hbmt` /*!40100 DEFAULT CHARACTER SET latin1 */;
-USE `hbmt`;
+CREATE DATABASE  IF NOT EXISTS `hobbykop_hbmt` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `hobbykop_hbmt`;
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
@@ -12,8 +12,8 @@ USE `hbmt`;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
-CREATE USER 'hbuser'@'localhost' IDENTIFIED BY 'h0obi$1q';
-GRANT ALL PRIVILEGES ON hbmt.* TO 'hbuser'@'localhost';
+CREATE USER 'hobbykop_hbuser1'@'localhost' IDENTIFIED BY 'h0obi1q';
+GRANT ALL PRIVILEGES ON hobbykop_hbmt.* TO 'hobbykop_hbuser1'@'localhost';
 
 
 -- login table 

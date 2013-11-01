@@ -108,7 +108,7 @@ error_reporting(E_ERROR | E_PARSE);
                 
                 		<li><a href="signup.php">Sign up</a></li>
 						<li><a href="signin.php">Sign in</a></li>
-						<li><a href="hobbyMate.php">Welcome Guest</a></li>
+						<li><a href="index.php">Welcome Guest</a></li>
                 <?php 		
                 	}
                 
