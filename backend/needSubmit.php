@@ -1,5 +1,6 @@
 <?php
 // connect to the database
+include_once 'common/shared.php';
 
 	$config_array = parse_ini_file("../config/config.ini");
 	$host=$config_array['host'];

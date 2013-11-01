@@ -1,4 +1,7 @@
 <?php
+include_once 'common/shared.php';
+
+session_start();
 
 /**
  * 
@@ -13,18 +16,17 @@ $host=$config_array['host'];
 $dbusername=$config_array['username']; 
 $dbpassword=$config_array['password']; 
 $db_name=$config_array['db'];
-session_start();
+//session_start();
 
 // Connect to server and select databse.
-$link = mysql_connect("$host", "$dbusername", "$dbpassword")or die("cannot connect");
+$link = mysql_connect("$host", "$dbusername", "$dbpassword")or die("cannot connect".$host."  username is ".$dbusername."  password is ".$dbpassword);
 mysql_select_db("$db_name")or die("cannot select DB ".mysql_error($link));
 
 $action=$_POST['action'];
 $username=$_POST['username'];
 $password=$_POST['password'];
 $password=md5($password);
- 	echo $action;
-
+ 	
 if($action == 'verify') {
         $sql="SELECT id FROM login WHERE username='$username' and password='$password'";
         $result=mysql_query($sql);

@@ -2,6 +2,8 @@
 if (!isset($_SESSION)) {
     session_start();
 }
+error_reporting(E_ERROR | E_PARSE | E_WARNING);
+
 ?>
 <html lang="en">
   <head>
@@ -28,7 +30,7 @@ if (!isset($_SESSION)) {
       <div class="navbar navbar-fixed-top">
         <div class="navbar-inner">
           <div class="container">
-            <a href="hobbyMate.php" class="brand brand-bootbus">HobbyMate</a>
+            <a href="index.php" class="brand brand-bootbus">HobbyMate</a>
             <!-- Below button used for responsive navigation -->
             <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
               <span class="icon-bar"></span>
@@ -96,7 +98,7 @@ if (!isset($_SESSION)) {
                 <b class="caret"></b>
                 </a>
 				  <ul class="dropdown-menu">
-				  <li><a href="/hbbymt/backend/logout.php">logout</a></li>
+				  <li><a href="../backend/logout.php">logout</a></li>
 				  
 				  </ul>			
 				</li>                

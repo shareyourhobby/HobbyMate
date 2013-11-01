@@ -1,4 +1,5 @@
 <?php
+include_once 'common/shared.php';
 
 
 	$params = session_get_cookie_params();

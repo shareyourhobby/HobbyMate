@@ -17,7 +17,7 @@ GRANT ALL PRIVILEGES ON hbmt.* TO 'hbuser'@'localhost';
 
 
 -- login table 
-CREATE  TABLE `hbmt`.`login` (
+CREATE  TABLE `hobbykop_hbmt`.`login` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `username` VARCHAR(45) NOT NULL COMMENT 'login name for user' ,
   `password` VARCHAR(100) NOT NULL COMMENT 'the password' ,
@@ -28,7 +28,7 @@ COMMENT = 'Contains data for user login';
 
 
 -- hobby table
-CREATE  TABLE `hbmt`.`hobbydetails` (
+CREATE  TABLE `hobbykop_hbmt`.`hobbydetails` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `uid` INT NOT NULL ,
   `hobbyname` VARCHAR(45) NULL ,
@@ -44,13 +44,13 @@ CREATE  TABLE `hbmt`.`hobbydetails` (
     ON UPDATE NO ACTION)
 COMMENT = 'This table contains hobby details';
 
-ALTER TABLE `hbmt`.`hobbydetails` CHANGE COLUMN `learn` `learn` TINYINT NULL DEFAULT '0'  , CHANGE COLUMN `share` `share` TINYINT NULL DEFAULT '0'  , CHANGE COLUMN `teach` `teach` TINYINT NULL DEFAULT '0'  ;
+ALTER TABLE `hobbykop_hbmt`.`hobbydetails` CHANGE COLUMN `learn` `learn` TINYINT NULL DEFAULT '0'  , CHANGE COLUMN `share` `share` TINYINT NULL DEFAULT '0'  , CHANGE COLUMN `teach` `teach` TINYINT NULL DEFAULT '0'  ;
 
 
 -- create the unique index...
 CREATE UNIQUE INDEX uidhb ON hobbydetails(uid, hobbyname);
 
 -- Add timestamp field in login & hobbydetails
-ALTER TABLE `hbmt`.`login` ADD COLUMN `created_date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP  AFTER `verified` ;
+ALTER TABLE `hobbykop_hbmt`.`login` ADD COLUMN `created_date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP  AFTER `verified` ;
 
-ALTER TABLE `hbmt`.`hobbydetails` ADD COLUMN `created_date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP  ;
+ALTER TABLE `hobbykop_hbmt`.`hobbydetails` ADD COLUMN `created_date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP  ;
