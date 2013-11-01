@@ -7,12 +7,11 @@ include_once 'common/header.php';
 			<div class="hero-unit">
 				<div class="row-fluid">
 					<div class="span7">
-					<h1>
-						Thanks a lot for telling us your needs! We will get back to you as soon as possible!
+					<h3>
+						Thanks a lot for providing the feedback!
+						This will help us alot! Cheers!!!
 						
-						Cheers!!!
-						
-					</h1>
+					</h3>
 					</div>
 
 					<div class="span5">
