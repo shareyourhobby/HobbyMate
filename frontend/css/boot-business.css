@@ -89,6 +89,9 @@
 .thumbnail img {
   width: 100%;
 }
+.userimage img {
+  width: 30%;
+}
 .active-link {
   background-color: #2E3436;
 }

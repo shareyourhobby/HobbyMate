@@ -22,7 +22,7 @@ session_start();
               		}
               	?>
 
-                <form class="form-horizontal form-signin-signup" action="/hbbymt/backend/login.php" method="post">
+                <form class="form-horizontal form-signin-signup" action="../backend/login.php" method="post">
                   <input type="hidden" name="action" value="verify">
                    <input type="text" name="username" placeholder="Email">
                   <input type="password" name="password" placeholder="Password">

@@ -2,7 +2,7 @@
 if (!isset($_SESSION)) {
     session_start();
 }
-error_reporting(E_ERROR | E_PARSE | E_WARNING);
+error_reporting(E_ERROR | E_PARSE);
 
 ?>
 <html lang="en">
@@ -108,7 +108,7 @@ error_reporting(E_ERROR | E_PARSE | E_WARNING);
                 
                 		<li><a href="signup.php">Sign up</a></li>
 						<li><a href="signin.php">Sign in</a></li>
-						<li>Welcome Guest</li>
+						<li><a href="hobbyMate.php">Welcome Guest</a></li>
                 <?php 		
                 	}
                 
