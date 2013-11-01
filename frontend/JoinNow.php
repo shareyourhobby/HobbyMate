@@ -12,6 +12,7 @@ function verifySubmit() {
 			
 		}else {
 			element.value = "0" ;
+			element.checked = true;
 		}
 	}) ;
 
