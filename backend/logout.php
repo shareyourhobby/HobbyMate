@@ -9,7 +9,7 @@ include_once 'common/shared.php';
     );
 	
 	session_destroy() ;
-		header("location:../frontend/hobbyMate.php") ;
+		header("location:../frontend/index.php") ;
 	
 
 ?>

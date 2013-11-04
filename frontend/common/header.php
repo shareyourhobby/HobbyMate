@@ -41,6 +41,7 @@ error_reporting(E_ERROR | E_PARSE);
             <div class="nav-collapse collapse">        
               <ul class="nav pull-right">
                 <li class="dropdown">
+                <!-- 
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Knowledge Zone<b class="caret"></b></a>
                   <ul class="dropdown-menu">
                     <li class="nav-header">Fitness</li>
@@ -76,6 +77,9 @@ error_reporting(E_ERROR | E_PARSE);
                     <li><a href="all_services.php">More Sports</a></li>
                   </ul>                  
                 </li>
+                 -->
+                 
+                 <!-- 
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">About<b class="caret"></b></a>
                   <ul class="dropdown-menu">
@@ -87,6 +91,8 @@ error_reporting(E_ERROR | E_PARSE);
                     <li><a href="blog.php">Blog</a></li>
                   </ul>
                 </li>
+                 -->
+                 <li><a href="feedback.php">Feedback</a></li>
                 <li><a href="faq.php">FAQ</a></li>
                 <li><a href="contact_us.php">Contact us</a></li>
                 

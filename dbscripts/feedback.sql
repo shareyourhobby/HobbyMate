@@ -26,16 +26,16 @@ SET time_zone = "+00:00";
 -- Table structure for table `feedback`
 --
 
-CREATE TABLE IF NOT EXISTS `feedback` (
-  `questA` tinyint(1) NOT NULL,
-  `questB` varchar(2000) NOT NULL,
-  `questC` tinyint(1) NOT NULL,
-  `questD` varchar(2000) NOT NULL,
-  `questE` varchar(2000) NOT NULL,
-  `questF` varchar(2000) NOT NULL,
+CREATE TABLE IF NOT EXISTS `hobbykop_hbmt`.`feedback` (
   `id` int(4) NOT NULL AUTO_INCREMENT,
+   `uid` int(4),
+  `questA` varchar(10) NOT NULL,
+  `questB` varchar(2000) NOT NULL,
+  `questC` varchar(10) NOT NULL,
+  `questD` varchar(50) NOT NULL,
+  `questE` varchar(2000),
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 --
 -- Dumping data for table `feedback`

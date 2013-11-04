@@ -1,6 +1,5 @@
 <?php
 // connect to the database
-echo("<p>You didn't select any buildings.</p>\n");
 $config_array = parse_ini_file("../config/config.ini");
 $host=$config_array['host'];
 $dbusername=$config_array['username'];
@@ -8,40 +7,32 @@ $dbpassword=$config_array['password'];
 $db_name=$config_array['db'];
 session_start();
 
+$uid = 0 ;
+if(isset($_SESSION['uid'])) {
+	$uid = $_SESSION['uid'] ; 
+}
+
 $link = mysql_connect("$host", "$dbusername", "$dbpassword");
 if (!$link)
 {
 	die('Could not connect: ' . mysqli_error($link));
 }
 
+    
+
+
 mysql_select_db("$db_name")or die("cannot select DB ".mysql_error($link));
-echo("<p>Connection Successful</p>");
 
 if (isset($_POST['formSubmit'])) 
 {
 	
-$questAValue = $_POST['radios-A'];
-if($questAValue =='Yes')
-{
-	$questA = 1;
-}
-else
-{
-	$questA = 0;
-}
+$questA = $_POST['radios-A'];
 
-$questB = $_POST['textarea-B'];
-$questCValue = $_POST['radios-C'];
-if($questCValue =='Yes')
-{
-	$questC = 1;
-}
-else
-{
-	$questC = 0;
-}
 
-$questD = $_POST['textarea-D'];
+$questB = mysql_real_escape_string($_POST['textarea-B'], $link);
+$questC = $_POST['radios-C'];
+
+
 
 
 function IsChecked($chkname,$value)
@@ -59,31 +50,38 @@ function IsChecked($chkname,$value)
 	return false;
 }
 
-$questE = " ";
+$questD = " ";
 
 if(IsChecked('checkbox', 'A'))
 {
-$questE .= "A,";
+$questD .= "A,";
 }
 if(IsChecked('checkbox', 'B'))
 {
-	$questE .= "B,";
+	$questD .= "B,";
 }
 if(IsChecked('checkbox', 'C'))
 {
-	$questE .= "C,";
+	$questD .= "C,";
+}
+if(IsChecked('checkbox', 'D'))
+{
+	$questD .= "D,";
 }
 
-$questF = $_POST['textarea-F'];
 
-$sql="INSERT INTO feedback (questA, questB, questC, questD, questE, questF) VALUES ($questA,'$questB',$questC,'$questD','$questE','$questF')";
+$name = $_POST['name'];
+
+$questE = mysql_real_escape_string($_POST['textarea-E'],$link);
+
+$sql="INSERT INTO feedback (uid,questA, questB, questC, questD, questE, name) VALUES ($uid,'$questA','$questB','$questC','$questD','$questE','$name')";
 
 mysql_query($sql) or trigger_error("Insert failed: " . mysql_error());
 header("location:../frontend/thankForFeedback.php");
 }
 else
 {
-	echo("<p>You didn't select any buildings.</p>\n");
+	echo("<p>You didn't select any options.</p>\n");
 }
 
 mysql_close($link);

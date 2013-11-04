@@ -12,8 +12,12 @@ session_start();
 			<div class="row-fluid">
 				<div class="span6 marketting-info">
 					<h1>Welcome</h1>
-					<h3>At Hobbymate,we aim to help people in learning & utilizing their activity of interest by connecting them with like minded people who share the same interest or finding the right institute for their learning.</h3>
-					<a href="JoinNow.php" class="btn btn-primary">Join US</a>
+					<h3>At Hobbymate,we aim to help people in learning & utilizing their activity of interest by connecting them with like minded people who share the same interest or finding the right institute for their learning.
+						Please visit <a href=faq.php>FAQ</a> section to know details on HobbyMate. Appreciate, if you can spend 5 mins of your time 
+						to provide <a href="feedback.php">Feedback</a>.
+					</h3>
+					<h3>You can also Join us at 
+					<a href="JoinNow.php" class="btn btn-primary">Join US</a></h3>
 				</div>
 				<div class="span6">
 					<?php include_once 'slideshow.php';?>				
